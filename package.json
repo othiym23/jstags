@@ -1,6 +1,6 @@
 {
   "name": "jstags",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ctags-like tag generator for JavaScript and Node.js",
   "main": "index.js",
   "scripts": {

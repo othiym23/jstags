@@ -47,6 +47,15 @@ function methodTags(filename, node, object) {
   });
 }
 
+function functionTag(filename, node) {
+  var name = node.id.name;
+  var startLine = node.loc.start.line - 1;
+  var pattern = startLine + '/\\<' + node.id.name + '\\>/;"';
+  var type = (name[0] === name[0].toUpperCase()) ? 'c' : 'f';
+
+  return [name, filename, pattern, type, 'lineno:' + (startLine + 1)].join('\t');
+}
+
 var nodeVisitors = {
   'VariableDeclarator' : function (filename, node) {
     if (!node.init) return;
@@ -67,6 +76,9 @@ var nodeVisitors = {
         methodTags(filename, node, target);
       }
     }
+  },
+  'FunctionDeclaration' : function (filename, node) {
+    console.log(functionTag(filename, node));
   }
 };
 
