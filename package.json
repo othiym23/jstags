@@ -1,0 +1,35 @@
+{
+  "name": "jstags",
+  "version": "0.0.1",
+  "description": "ctags-like tag generator for JavaScript and Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test"
+  },
+  "bin": {
+    "jstags": "./bin/jstags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/othiym23/jstags.git"
+  },
+  "keywords": [
+    "esprima",
+    "ctags",
+    "ast",
+    "vim",
+    "javascript",
+    "analysis",
+    "source"
+  ],
+  "author": "Forrest L Norvell <ogd@aoaioxxysz.net>",
+  "license": "BSD",
+  "dependencies": {
+    "esprima": "~1.0.2",
+    "estraverse": "0.0.3",
+    "optimist": "~0.3.5"
+  },
+  "devDependencies": {
+    "tap": "~0.3.2"
+  }
+}

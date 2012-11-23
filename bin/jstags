@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+var argv   = require('optimist').argv
+  , jstags = require('jstags')
+  ;
+
+jstags(argv._);
